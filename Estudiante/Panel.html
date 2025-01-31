@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PANEL ESTUDIANTES</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/Logotipo/logotipo.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/script.js" defer></script> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a href="Panel.html" class="text-nowrap logo-img ms-0 ms-md-1">
+              <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" width="180" alt="">
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="ti ti-x fs-8"></i>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav" class="mb-4 pb-2">
+            <!-- Título del menú principal -->
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Menú Principal</span>
+            </li>
+        
+           <!-- Cursos con Submenú -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow sidebar-link info-hover-bg" href="javascript:void(0)" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-book fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Cursos</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level styled-submenu">
+                <li class="sidebar-item">
+                  <a href="../Estudiante/Programacion.html" class="sidebar-link">
+                    <i class="ti ti-code fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Programación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="../Estudiante/Ofimatica.html" class="sidebar-link">
+                    <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Ofimática</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="../Estudiante/Idioma.html" class="sidebar-link">
+                    <i class="ti ti-language fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Idioma Inglés</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="../Estudiante/Calculo.html" class="sidebar-link">
+                    <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Cálculo</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="../Estudiante/Comunicacion.html" class="sidebar-link">
+                    <i class="ti ti-microphone fs-6 text-muted me-2"></i> 
+                    <span class="hide-menu">Comunicación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="../Estudiante/Empleabilidad.html" class="sidebar-link">
+                    <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Empleabilidad</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Consejos de Estudio -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link danger-hover-bg" href="../Menus_Añadidos/Consejos.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-danger rounded-3">
+                  <i class="ti ti-bulb fs-7 text-danger"></i> <!-- Cambiado a un icono de bombilla -->
+                </span>
+                <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link secondary-hover-bg" href="../Menus_Añadidos/Material_Adicional.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                  <i class="ti ti-heart fs-7 text-secondary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Mensajes Motivacionales</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link info-hover-bg" href="javascript:void(0);" onclick="volverMenu()" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-home fs-7 text-primary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Volver al menu Principal</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="body-wrapper">
+      <!-- Header fijo con el logo del usuario -->
+      <!-- <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../assets/Logotipo/usuario.png" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">Mi Perfil</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">Mi Cuenta</p>
+                    </a>
+                    <a href="./estudiante.html" class="btn btn-outline-primary mx-3 mt-2 d-block shadow-none">Salir</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header> -->
+      <br><br>
+      <!-- Contenido principal desplazable -->
+      <main class="main-content"> <!-- Ajusta el margen superior para que no se sobreponga al header fijo -->
+        <div class="container mt-4">
+          <!-- Sección de bienvenida -->
+          <div class="welcome-section text-center mb-5">
+            <h1 class="display-4">¡Bienvenido a Nuestra Plataforma de Recursos Educativos!</h1>
+            <p class="lead">Explora nuestros cursos y recursos diseñados para ayudarte a alcanzar tus objetivos académicos y profesionales.</p>
+          </div>
+      
+          <!-- Sección de cursos -->
+          <div class="row">
+            <!-- Curso 1: Programación -->
+            <div class="col-md-4 mb-4">
+              <div class="card course-card">
+                <img src="../assets/Logotipo/programacion.jpg" class="card-img-top" alt="Programación">
+                <div class="card-body">
+                  <h5 class="card-title">Programación</h5>
+                  <p class="card-text">Domina los conceptos de programación con lenguajes como Python, Java y más.</p>
+                  <a href="../Estudiante/Programacion.html" class="btn btn-primary">Ver curso</a>
+                </div>
+              </div>
+            </div>
+            <!-- Curso 2: Ofimática -->
+            <div class="col-md-4 mb-4">
+              <div class="card course-card">
+                <img src="../assets/Logotipo/ofimatica.jpg" class="card-img-top" alt="Ofimática">
+                <div class="card-body">
+                  <h5 class="card-title">Ofimática</h5>
+                  <p class="card-text">Aprende a utilizar herramientas de oficina como Word, Excel y PowerPoint de manera eficiente.</p>
+                  <a href="../Estudiante/Ofimatica.html" class="btn btn-primary">Ver curso</a>
+                </div>
+              </div>
+            </div>
+            <!-- Curso 3: Idioma Inglés -->
+            <div class="col-md-4 mb-4">
+              <div class="card course-card">
+                <img src="../assets/Logotipo/ingles.jpeg" class="card-img-top" alt="Idioma Inglés">
+                <div class="card-body">
+                  <h5 class="card-title">Idioma Inglés</h5>
+                  <p class="card-text">Mejora tu nivel de inglés con clases de gramática, conversación y vocabulario.</p>
+                  <a href="../Estudiante/Idioma.html" class="btn btn-primary">Ver curso</a>
+                </div>
+              </div>
+            </div>
+            <!-- Curso 4: Cálculo -->
+            <div class="col-md-4 mb-4">
+              <div class="card course-card">
+                <img src="../assets/Logotipo/calculo.jpg" class="card-img-top" alt="Cálculo">
+                <div class="card-body">
+                  <h5 class="card-title">Cálculo</h5>
+                  <p class="card-text">Explora los fundamentos del cálculo diferencial e integral para resolver problemas complejos.</p>
+                  <a href="../Estudiante/Calculo.html" class="btn btn-primary">Ver curso</a>
+                </div>
+              </div>
+            </div>
+            <!-- Curso 5: Comunicación -->
+            <div class="col-md-4 mb-4">
+              <div class="card course-card">
+                <img src="../assets/Logotipo/comunicacion.jpg" class="card-img-top" alt="Comunicación">
+                <div class="card-body">
+                  <h5 class="card-title">Comunicación</h5>
+                  <p class="card-text">Desarrolla habilidades efectivas de comunicación verbal y escrita en distintos contextos.</p>
+                  <a href="../Estudiante/Comunicacion.html" class="btn btn-primary">Ver curso</a>
+                </div>
+              </div>
+            </div>
+            <!-- Curso 6: Empleabilidad -->
+            <div class="col-md-4 mb-4">
+              <div class="card course-card">
+                <img src="../assets/Logotipo/empleabilidad.jpg" class="card-img-top" alt="Empleabilidad">
+                <div class="card-body">
+                  <h5 class="card-title">Empleabilidad</h5>
+                  <p class="card-text">Prepárate para el mercado laboral con técnicas de búsqueda de empleo y desarrollo profesional.</p>
+                  <a href="../Estudiante/Empleabilidad.html" class="btn btn-primary">Ver curso</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

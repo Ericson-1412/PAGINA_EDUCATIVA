@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PANEL ESTUDIANTES</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/Logotipo/logotipo.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/script.js" defer></script> 
+</head>
+
+<body>
+
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a href="#" class="text-nowrap logo-img ms-0 ms-md-1">
+              <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" width="180" alt="">
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="ti ti-x fs-8"></i>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav" class="mb-4 pb-2">
+            <!-- Título del menú principal -->
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Menú Principal</span>
+            </li>
+        
+           <!-- Cursos con Submenú -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow sidebar-link info-hover-bg" href="javascript:void(0)" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-book fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Cursos</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level styled-submenu">
+                <li class="sidebar-item">
+                  <a href="Programacion.html" class="sidebar-link">
+                    <i class="ti ti-code fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Programación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Ofimatica.html" class="sidebar-link">
+                    <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Ofimática</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Idioma.html" class="sidebar-link">
+                    <i class="ti ti-language fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Idioma Inglés</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Calculo.html" class="sidebar-link">
+                    <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Cálculo</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Comunicacion.html" class="sidebar-link">
+                    <i class="ti ti-microphone fs-6 text-muted me-2"></i> 
+                    <span class="hide-menu">Comunicación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Empleabilidad.html" class="sidebar-link">
+                    <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Empleabilidad</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Consejos de Estudio -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link danger-hover-bg" href="../Menus_Añadidos/Consejos.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-danger rounded-3">
+                  <i class="ti ti-bulb fs-7 text-danger"></i> <!-- Cambiado a un icono de bombilla -->
+                </span>
+                <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link secondary-hover-bg" href="../Menus_Añadidos/Material_Adicional.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                  <i class="ti ti-heart fs-7 text-secondary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Mensajes Motivacionales</span>
+              </a>
+            </li>
+            
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link info-hover-bg" href="javascript:void(0);" onclick="volverMenu()" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-home fs-7 text-primary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Volver al menu Principal</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <br><br>
+    <div class="body-wrapper">
+        <main class="main-content container mt-4">
+          <h1 class="text-center">Contenido del Curso de Empleabilidad</h1>
+          <div class="accordion" id="courseAccordion"><br>
+            <!-- Sección 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  SECCIÓN 1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 1:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1TDqeMU8AQmqZSb_q868qBYsa-pEZR-lC/view?usp=sharing" target="_blank">Manejo de los recursos humanos</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FGcOkJ25POR8JCnpvPbp2Bn7u6Xau99m/view?usp=drive_link" target="_blank">Cambia tu mentalidad para cambiar tu vida</a></li>
+                    <li><a href="https://drive.google.com/file/d/1OtNfC13nigNSLIULyMmKnLECJV8N5qKs/view?usp=sharing" target="_blank">Guía de buenas prácticas en Reclutamiento y Selección de personal</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SECCIÓN 2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 2:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1HbxFy3rT-NAT1okzxnfroVqqhFkb71RF/view?usp=drive_link" target="_blank">Claves para ser un profesional competitivo</a></li>
+                    <li><a href="https://drive.google.com/file/d/1e3dyUMsK52gfpE8sAPeJVcQ5h52KC9F0/view?usp=sharing" target="_blank">Desarrollo del talento humano basado en competencias</a></li>
+                    <li><a href="https://drive.google.com/file/d/1EExz3y_Pe9uvMsI4_OpNDoimBBLBoiVH/view?usp=sharing" target="_blank">Administracion_de_personal</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  SECCIÓN 3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 3:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1BpCaAiWOq5lT8awvbxa0415kwFcKxkWM/view?usp=drive_link" target="_blank">Claves Para Un Liderazgo Personal Exitoso</a></li>
+                    <li><a href="https://drive.google.com/file/d/12yVjRSD7VvOCP6sy_r1lfL8q8hGh3zQF/view?usp=sharing" target="_blank">Administración de Recursos Humanos (Wayne)</a></li>
+                    <li><a href="https://drive.google.com/file/d/1HTRZAe8Jd3Vc1zJoVKCarYyyS8s1shrW/view?usp=sharing" target="_blank">¿Cómo medir la efectividad de la gestión de RRHH</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+          <!-- Sección 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                SECCIÓN 4
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 4:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1uQYis-rmPn7tR830W-cuVmVtGF-8O9a7/view?usp=drive_link" target="_blank">7 tácticas para crear equipos de alto rendimiento</a></li>
+                  <li><a href="https://drive.google.com/file/d/15IPHLmz7fXkKGz03fjQpWFqjsCfd7E_q/view?usp=drive_link" target="_blank">Claves para ser un profesional competitivo</a></li>
+                  <li><a href="https://drive.google.com/file/d/1BBoGeB2zVg-ZhjUmtx2HbIcksxov1Etc/view?usp=drive_link" target="_blank">Cómo Llegar Al Éxito de Fracaso en Fracaso</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                SECCIÓN 5
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 5:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1Yg-jKu8LBvexdE1aGKBrhK_M_dNnwmqY/view?usp=drive_link" target="_blank">Destaca profesionalmente con tu Marca Personal</a></li>
+                  <li><a href="https://drive.google.com/file/d/1oBcc1OHSYudBMYy9-5l5shR-vVr9lbJB/view?usp=drive_link" target="_blank">Entrenando a tu líder</a></li>
+                  <li><a href="https://drive.google.com/file/d/1E8z6QfnF7ppHT1sBZpoTg1rfltSRwS3D/view?usp=drive_link" target="_blank">L Liderazgo y Motivación d Equipos d Trabajo 8ªed. Mª Teresa Palomo. Espñ © 2013</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Sección 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                SECCIÓN 6
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 6:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/18bdCHEccfOAlwMr-tT5olU7xrHs7OA5r/view?usp=drive_link" target="_blank">La principal tarea de un líder</a></li>
+                  <li><a href="https://drive.google.com/file/d/1TsPsCSJuBdytoQV1X6XUJFFv2e0DaCbU/view?usp=drive_link" target="_blank"></a>Liderazgo Constructivo</li>
+                  <li><a href="https://drive.google.com/file/d/1He2miR2n_R8gybSpjiKCsyz-tRB2sCm_/view?usp=drive_link" target="_blank">Liderazgo Invencible</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                SECCIÓN 7
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 7:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1mtuJJNQsxUVRSMTJ4YckmcOy5q2U4Nyn/view?usp=drive_link" target="_blank">El análisis DAFO amazon</a></li>
+                  <li><a href="https://drive.google.com/file/d/1qmMPFEhxw511EH9ve60GIBTfOYB_mDH9/view?usp=drive_link" target="_blank">El análisis PESTEL amazon</a></li>
+                  <li><a href="https://drive.google.com/file/d/1yz8hTzx6ncoF0ub8tKNrLkwxGeOWkP73/view?usp=drive_link" target="_blank">Los criterios SMART- amazon</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón para volver al panel principal -->
+        <div class="text-center mt-5">
+            <a href="Panel.html" class="btn btn-primary">Volver al Panel Principal</a>
+        </div>
+        </main>
+      </div>
+    </div>
+  
+    
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

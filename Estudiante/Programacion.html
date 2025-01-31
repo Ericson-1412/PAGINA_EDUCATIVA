@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PANEL ESTUDIANTES</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/Logotipo/logotipo.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/script.js" defer></script> 
+</head>
+
+<body>
+
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a href="#" class="text-nowrap logo-img ms-0 ms-md-1">
+              <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" width="180" alt="">
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="ti ti-x fs-8"></i>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav" class="mb-4 pb-2">
+            <!-- Título del menú principal -->
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Menú Principal</span>
+            </li>
+        
+           <!-- Cursos con Submenú -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow sidebar-link info-hover-bg" href="javascript:void(0)" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-book fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Cursos</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level styled-submenu">
+                <li class="sidebar-item">
+                  <a href="Programacion.html" class="sidebar-link">
+                    <i class="ti ti-code fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Programación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Ofimatica.html" class="sidebar-link">
+                    <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Ofimática</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Idioma.html" class="sidebar-link">
+                    <i class="ti ti-language fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Idioma Inglés</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Calculo.html" class="sidebar-link">
+                    <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Cálculo</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Comunicacion.html" class="sidebar-link">
+                    <i class="ti ti-microphone fs-6 text-muted me-2"></i> 
+                    <span class="hide-menu">Comunicación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Empleabilidad.html" class="sidebar-link">
+                    <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Empleabilidad</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+           <!-- Consejos de Estudio -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link danger-hover-bg" href="../Menus_Añadidos/Consejos.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-danger rounded-3">
+                  <i class="ti ti-bulb fs-7 text-danger"></i> <!-- Cambiado a un icono de bombilla -->
+                </span>
+                <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link secondary-hover-bg" href="../Menus_Añadidos/Material_Adicional.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                  <i class="ti ti-heart fs-7 text-secondary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Mensajes Motivacionales</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link info-hover-bg" href="javascript:void(0);" onclick="volverMenu()" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-home fs-7 text-primary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Volver al menu Principal</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <br><br>
+    <div class="body-wrapper">
+        <main class="main-content container mt-4">
+          <h1 class="text-center">Contenido del Curso de Programacion</h1>
+          <div class="accordion" id="courseAccordion"><br>
+            <!-- Sección 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  SECCIÓN 1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 1:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1C_g3-zSfAQGF-9jRt8tPTpk1nu_fCdsQ/view?usp=drive_link" target="_blank">Curso-HTML5-v1 - Maestros de la web</a></li>
+                    <li><a href="https://drive.google.com/file/d/1fMticGAXhI6Lw4qr98fH2GBzl37GxKbI/view?usp=sharing" target="_blank">HTML - Programación con Frontpage</a></li>
+                    <li><a href="https://drive.google.com/file/d/1cZ7C9sq0R-fo4ZTrRlGIFFRamnuMxkOs/view?usp=drive_link" target="_blank">HTML - Guía para escribir documentos HTML</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SECCIÓN 2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 2:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/141JRjEwiTbsSdA_TYctQJfdJX5_33QfO/view?usp=sharing" target="_blank">Cómo_ser_front_end_sin_fallar_en_el_intento_Tus_primeros_pasos</a></li>
+                    <li><a href="https://drive.google.com/file/d/1EwqQEKputOWJnEPJYBtaqNT8pse9QuxQ/view?usp=sharing" target="_blank">Arrancar con HTML5. Curso de programacion Herrera Rios Emmanuel</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  SECCIÓN 3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 3:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1L5YdxSkInfSeEXgMsdLuhHwrgVziXwFO/view?usp=sharing" target="_blank">Apps HTML5 para _móviles _Damián De Luca_smartphones tab</a></li>
+                    <li><a href="https://drive.google.com/file/d/1sJDyvDAkgD2dDvSULCLM61SiVlpMee1Q/view?usp=sharing" target="_blank">36-Pasos-basicos-para-desarrollar-un-Sitio-Web</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  SECCIÓN 4
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 4:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1MdXtk_QyW_Iuc4soJyTP56lpjJ3fOKAg/view?usp=drive_link" target="_blank">HTML5 y CSS3 Revolucione el diseño de sus sitios web (2a edición)</a></li>
+                    <li><a href="https://drive.google.com/file/d/1LPZFd9WkD1255ROAyF99QrS0Zv-G8wMV/view?usp=drive_link" target="_blank">diseno_paginas_web_accesibles</a></li>
+                    <li><a href="https://drive.google.com/file/d/1PDtd_wj08X5HExwi2UZPZnqiEqD6DmDu/view?usp=drive_link" target="_blank">Desarrollo web para dispositivos moviles diseñar y programas webapps Fernando Luna Users</a></li>
+                    <li><a href="https://drive.google.com/file/d/1mi_nehUZ4GUWh7AMVeD6iR95YL4rr_bN/view?usp=drive_link" target="_blank">CursoCSS3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sección 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  SECCIÓN 5
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 5:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1Wucc7cNMkyCorbo9MlHw3NAgR3r9Vyvz/view?usp=drive_link" target="_blank">software_libre_redes</a></li>
+                    <li><a href="https://drive.google.com/file/d/1WkhF0uL8Ub3tq7ff4sSI8ECGGiIFNra6/view?usp=drive_link" target="_blank">Introduccion_al_desarrollo_de_software</a></li>
+                    <li><a href="https://drive.google.com/file/d/1_giOSgBbG4YpBvNGpOsu1Dtks76ib4aW/view?usp=drive_link" target="_blank">Desarrollo-de-software-dirigido-por-modelos</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sección 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  SECCIÓN 6
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 6:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1jAh39qPBlMAgKBx94k-TAcr8gZq-X5W7/view?usp=drive_link" target="_blank">Visual Basic - Guia definitiva del Programador</a></li>
+                    <li><a href="https://drive.google.com/file/d/1QaWYUMy71ZMsZHxgs6A8BancpoPwGX18/view?usp=drive_link" target="_blank">El Proceso Unificado</a></li>
+                    <li><a href="https://drive.google.com/file/d/1HxYBaLmZVt4p9jE79PR5hjdBl8lbJHAZ/view?usp=drive_link" target="_blank">El Proceso Unificado de Desarrollo de Software - Jacobson - Booch - Rumbaugh</a></li>
+                    <li><a href="https://drive.google.com/file/d/137LnENhznz-3oSddecXJTWekY63kYiDM/view?usp=drive_link" target="_blank">Diseño orientado a objetos con UML</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sección 7 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  SECCIÓN 7
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 7:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1dHQWoUbjdqCJaHpirni_FLcpFc_QokV4/view?usp=drive_link" target="_blank">sistemas-operativos-netbooks</a></li>
+                    <li><a href="https://drive.google.com/file/d/1DcQ0VTS_rHLVUlmX5KFrqgnclbR9GWua/view?usp=drive_link" target="_blank">sistemas-operativos-luis-castellanos</a></li>
+                    <li><a href="https://drive.google.com/file/d/1raU3r5zVu859wsAEgABaMXOJYXx0NrJD/view?usp=drive_link" target="_blank">Sistemas-Operativos-CC-BY-SA-3.0</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Zy1EEMZVe47Hj0lU5B0z2xEvsxSihkJW/view?usp=drive_link" target="_blank">Fundamentos-Sistemas-Operativos-2015</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sección 8 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  SECCIÓN 8
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 8:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1w4-QPbs5A82eX4B3bBDlAaxcGJUQM7tO/view?usp=drive_link" target="_blank">Sistema-Operativo-Gnulinux-Basico</a></li>
+                    <li><a href="https://drive.google.com/file/d/1p_YOggYlQkSRy3JiGufWdUxVZlyMrhjA/view?usp=drive_link" target="_blank">Sistema Operativo Linux 2ºedicion</a></li>
+                    <li><a href="https://drive.google.com/file/d/1X4xhUZv9JcyKY-S8OSLUm6Uc1vlohf3s/view?usp=drive_link" target="_blank">Manual de Administracion de Linux</a></li>
+                    <li><a href="https://drive.google.com/file/d/1sqbjOnHOoJF_DVQ8Q4vdkHyCw02b8-9o/view?usp=drive_link" target="_blank">Linux.Maxima.Seguridad.-.Edicion.Especial</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sección 9 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  SECCIÓN 9
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 9:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1elZggj55WKOE7nbgwgKZskzPdRtyUM2A/view?usp=drive_link" target="_blank">Programación Orientada a Objetos C++ y Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Nl7daofuSvU80SItkcZgRCNiQNmFrhS0/view?usp=drive_link" target="_blank">Patrones_de_Diseno_Elementos_de_software_orientado_a_objetos_reutilizable</a></li>
+                    <li><a href="https://drive.google.com/file/d/14KkrVnkJNmeC3cau-6_tn4h9ZwqzL-lJ/view?usp=drive_link" target="_blank">Introduccion A La Programacion Orientada A Objetos</a></li>
+                    <li><a href="https://drive.google.com/file/d/1J5QZbmJeJMzW65Gtbj-d7ZVJFGHvayPu/view?usp=drive_link" target="_blank">Clases POO</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sección 10 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  SECCIÓN 10
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 10:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1LjBblldlNbOtdNTMQMPKtnz1FRAgvqO7/view?usp=drive_link" target="_blank">POO y MVC en PHP</a></li>
+                    <li><a href="https://drive.google.com/file/d/1-ZU3f5His4pyB0Tnpj_zv698zb1OzS6W/view?usp=drive_link" target="_blank">Php+Mysql-DesdeCero</a></li>
+                    <li><a href="https://drive.google.com/file/d/1PACbt-hohp0v9cnOc1L7qe1VmiASLeCY/view?usp=drive_link" target="_blank">Fundamentos de Programación PHP - Ing. Ricardo Marcelo Villalobos</a></li>
+                    <li><a href="https://drive.google.com/file/d/1G1PudV0gvNrOu-i6gxZ63gMCGuU0i65q/view?usp=drive_link" target="_blank">PHP + MYSQL DESDE CERO</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+
+
+          <!-- Botón para volver al panel principal -->
+        <div class="text-center mt-5">
+            <a href="Panel.html" class="btn btn-primary">Volver al Panel Principal</a>
+        </div>
+        </main>
+      </div>
+    </div>
+  
+    
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

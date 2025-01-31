@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PANEL ESTUDIANTES</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/Logotipo/logotipo.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/script.js" defer></script> 
+</head>
+
+<body>
+
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a href="#" class="text-nowrap logo-img ms-0 ms-md-1">
+              <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" width="180" alt="">
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="ti ti-x fs-8"></i>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav" class="mb-4 pb-2">
+            <!-- Título del menú principal -->
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Menú Principal</span>
+            </li>
+        
+           <!-- Cursos con Submenú -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow sidebar-link info-hover-bg" href="javascript:void(0)" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-book fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Cursos</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level styled-submenu">
+                <li class="sidebar-item">
+                  <a href="Programacion.html" class="sidebar-link">
+                    <i class="ti ti-code fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Programación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Ofimatica.html" class="sidebar-link">
+                    <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Ofimática</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Idioma.html" class="sidebar-link">
+                    <i class="ti ti-language fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Idioma Inglés</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Calculo.html" class="sidebar-link">
+                    <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Cálculo</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Comunicacion.html" class="sidebar-link">
+                    <i class="ti ti-microphone fs-6 text-muted me-2"></i> 
+                    <span class="hide-menu">Comunicación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Empleabilidad.html" class="sidebar-link">
+                    <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Empleabilidad</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Consejos de Estudio -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link danger-hover-bg" href="../Menus_Añadidos/Consejos.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-danger rounded-3">
+                  <i class="ti ti-bulb fs-7 text-danger"></i> <!-- Cambiado a un icono de bombilla -->
+                </span>
+                <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link secondary-hover-bg" href="../Menus_Añadidos/Material_Adicional.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                  <i class="ti ti-heart fs-7 text-secondary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Mensajes Motivacionales</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link info-hover-bg" href="javascript:void(0);" onclick="volverMenu()" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-home fs-7 text-primary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Volver al menu Principal</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <br><br>
+    <div class="body-wrapper">
+        <main class="main-content container mt-4">
+          <h1 class="text-center">Contenido del Curso de Cálculo</h1>
+          <div class="accordion" id="courseAccordion"><br>
+            <!-- Sección 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  SECCIÓN 1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 1:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1ohc-l9E7DXOA5BZnyeCFhv_hZZpmbDKz/view?usp=sharing" target="_blank">FPROP6S_Calculo_Diferencial_Integral2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1LVRqcrrzE9Jd_4SYrCa0WVBGrH8cVJbY/view?usp=sharing" target="_blank">Cálculo Integral_Proce.</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SECCIÓN 2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 2:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/117y8dsHHdPyEmZagSCsVegzpUEt1xLY3/view?usp=sharing" target="_blank">Cálculo Integral_Evalua</a></li>
+                    <li><a href="https://drive.google.com/file/d/1LRtl0eMhFultFjEY_-OspsNvoh6NgR1K/view?usp=sharing" target="_blank">ANALISIS_MATEMATICO_II_CALCULO_II_Espino</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  SECCIÓN 3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 3:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1qtk77pGArhjr6iO4afore__LpQt8zF1h/view?usp=sharing" target="_blank">CALCULO DIFERENCIAL</a></li>
+                    <li><a href="https://drive.google.com/file/d/1plBAjNscCAj3WsEmkxzrAywPq7aYsaS5/view?usp=sharing" target="_blank">CALCULO DIFERENCIAL BACH YUC</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+          <!-- Sección 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                SECCIÓN 4
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 4:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1Rm2F3KFoaRzJI3oGfF3cyjarMZebjt-u/view?usp=sharing" target="_blank">CALCULO DIFERENCIA BACH SON</a></li>
+                  <li><a href="https://drive.google.com/file/d/1qKkHiFFM95NEP1qjGAE8c8gRcZNSXbJg/view?usp=sharing" target="_blank">CALCULO CON APLICACIÓN</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                SECCIÓN 5
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 5:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1gOHroNSCRLECPlQhji4PeIqCKFzv-u6u/view?usp=sharing" target="_blank">CALCULO1</a></li>
+                  <li><a href="https://drive.google.com/file/d/18OSo18CIbO-j8CYHSBg6ugklYz-VyYNq/view?usp=drive_link" target="_blank">ecuaciones-diferenciales-con-aplicaciones-de-modelado-cengage-learning</a></li>
+                  <li><a href="https://drive.google.com/file/d/1WpAvGkN_Km5lX2Ku1rUNe9WbjWiBCI4p/view?usp=drive_link" target="_blank">VENTURINI - KICILLOF - Análisis Matemático II para estudiantes de Ciencias Económicas</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                SECCIÓN 6
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 6:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1Kvod8AMC0GjSp5-6KOWKh8WC-zb_pd5B/view?usp=drive_link" target="_blank">ECUACIONES-DIFERENCIALES---CLASE</a></li>
+                  <li><a href="https://drive.google.com/file/d/16rI67T1F1peQMMlpi8n6eY1xFx_RfhPa/view?usp=drive_link" target="_blank">Ecuaciones-Diferenciales---ANEXO--CLASE-N----4</a></li>
+                  <li><a href="https://drive.google.com/file/d/1MSFhUeEYxVbiIth0z_zFe1F12XPtCl9o/view?usp=drive_link" target="_blank">CLASE-N----4---ECUACIONES-DIFERENCIALES---METODO-DE-VARIACION-DE-PARAMETROS</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                SECCIÓN 7
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 7:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1O3QAwxqxUhLFn-EYVkylRCFSZNA4YxWC/view?usp=drive_link" target="_blank">Analisis II- Garcia Venturini</a></li>
+                  <li><a href="https://drive.google.com/file/d/0B-NNNxySptGxc3JlX05vam9JVDRRRXZlbzNJTjNCblN4ZDJv/view?usp=drive_link&resourcekey=0-TMOWF2II3k0qVzr0yGs3FA" target="_blank">TP de Análisis de Fourier (2018)</a></li>
+                  <li><a href="https://drive.google.com/file/d/1dQF2Fm9qWqPVulV-d-ZwrS95L3HfNBTK/view?usp=drive_link" target="_blank">Manual de fórmulas y tablas matematicas (Murray R. Spiegel)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 8 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                SECCIÓN 8
+              </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 8:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1FOUvgGoL11HeGIOv4tg1OLbvI8VeuviX/view?usp=drive_link" target="_blank">Trigonometría 2020-2</a></li>
+                  <li><a href="https://drive.google.com/file/d/1l3kI1sAQk_HM6EbYe5mkGXvZcOl9na_C/view?usp=drive_link" target="_blank">Matemáticas V_ Cálculo.Diferencial, (2ed) - René.Jimenez</a></li>
+                  <li><a href="https://drive.google.com/file/d/1l84k1Wr6R7ZMmQpIpWFZmWV-YkEKqPZV/view?usp=drive_link" target="_blank">Iniciación_al_Cálculo_diferencial_e_integral_Arquímedes_Caballero</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 9 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                SECCIÓN 9
+              </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 9:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1l2IML8lKScnOrnQWh-AauG4-oOMiz1n_/view?usp=drive_link" target="_blank">Ecuaciones_diferenciales_Y_PROBLEMAS_CON</a></li>
+                  <li><a href="https://drive.google.com/file/d/1bDI6nxMX8uowawmKcT1qUHc4WWCiLxQz/view?usp=drive_link" target="_blank">Copia de Matematicas_3_-_Calculo_de_Varias_Variab</a></li>
+                  <li><a href="https://drive.google.com/file/d/1lAa09XWuKD83vz7E9XToCpTFCY5yS4es/view?usp=drive_link" target="_blank">ANALISIS_MATEMATICO_II_CALCULO_II_Espino</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 10 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                SECCIÓN 10
+              </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 10:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1gnZLP4Xb_VTfMyA4W6z0lg2SJKh1Etuq/view?usp=drive_link" target="_blank">Matemática funciones 1 - Longseller</a></li>
+                  <li><a href="https://drive.google.com/file/d/13BaP902lzYSfb9PLVNyoJLfHksFkZ9Zq/view?usp=drive_link" target="_blank">Matemática funciones 2 - Longseller</a></li>
+                  <li><a href="https://drive.google.com/file/d/1Zu-kr14HRWgcOEkjOMA7tTDoi6nequ8H/view?usp=drive_link" target="_blank">Matemática números y sucesiones - Longseller</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón para volver al panel principal -->
+        <div class="text-center mt-5">
+            <a href="Panel.html" class="btn btn-primary">Volver al Panel Principal</a>
+        </div>
+        </main>
+      </div>
+    </div>
+  
+    
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

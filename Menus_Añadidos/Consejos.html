@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONSEJOS PARA ESTUDIANTES</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/Logotipo/logotipo.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+  <link rel="stylesheet" href="../Estudiante/Estilo_Material.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/script.js" defer></script> 
+</head>
+
+<body>
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    
+    <!-- Sidebar -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar" data-simplebar>
+          <div class="d-flex mb-4 align-items-center justify-content-between">
+              <a href="../Estudiante/Panel.html" class="text-nowrap logo-img ms-0 ms-md-1">
+                <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" width="180" alt="">
+              </a>
+              <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                <i class="ti ti-x fs-8"></i>
+              </div>
+          </div>
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="mb-4 pb-2">
+              <!-- Título del menú principal -->
+              <li class="nav-small-cap">
+                <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+                <span class="hide-menu">Menú Principal</span>
+              </li>
+          
+             <!-- Cursos con Submenú -->
+              <li class="sidebar-item">
+                <a class="sidebar-link has-arrow sidebar-link info-hover-bg" href="javascript:void(0)" aria-expanded="false">
+                  <span class="aside-icon p-2 bg-light-info rounded-3">
+                    <i class="ti ti-book fs-7 text-info"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Cursos</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level styled-submenu">
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Programacion.html" class="sidebar-link">
+                      <i class="ti ti-code fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Programación</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Ofimatica.html" class="sidebar-link">
+                      <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Ofimática</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Idioma.html" class="sidebar-link">
+                      <i class="ti ti-language fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Idioma Inglés</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Calculo.html" class="sidebar-link">
+                      <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Cálculo</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Comunicacion.html" class="sidebar-link">
+                      <i class="ti ti-microphone fs-6 text-muted me-2"></i> 
+                      <span class="hide-menu">Comunicación</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Empleabilidad.html" class="sidebar-link">
+                      <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Empleabilidad</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+  
+              <!-- Consejos de Estudio -->
+              <li class="sidebar-item">
+                <a class="sidebar-link sidebar-link danger-hover-bg" href="../Menus_Añadidos/Consejos.html" aria-expanded="false">
+                  <span class="aside-icon p-2 bg-light-danger rounded-3">
+                    <i class="ti ti-bulb fs-7 text-danger"></i> <!-- Cambiado a un icono de bombilla -->
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+                </a>
+              </li>
+  
+              <li class="sidebar-item">
+                <a class="sidebar-link sidebar-link secondary-hover-bg" href="../Menus_Añadidos/Material_Adicional.html" aria-expanded="false">
+                  <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                    <i class="ti ti-heart fs-7 text-secondary"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Mensajes Motivacionales</span>
+                </a>
+              </li>
+  
+              <li class="sidebar-item">
+                <a class="sidebar-link sidebar-link info-hover-bg" href="javascript:void(0);" onclick="volverMenu()" aria-expanded="false">
+                  <span class="aside-icon p-2 bg-light-info rounded-3">
+                    <i class="ti ti-home fs-7 text-primary"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Volver al menu Principal</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+    <!-- Contenido principal -->
+    <div class="body-wrapper">
+      <main class="main-content">
+        <div class="container mt-4">
+          <!-- Sección de bienvenida -->
+          <div class="welcome-section text-center mb-5">
+            <h1 class="display-4">¡Bienvenido a Nuestros Consejos para Estudiantes!</h1>
+            <p class="lead">Descubre consejos prácticos y técnicas efectivas para mejorar tu rendimiento académico y sacar el máximo provecho de tus estudios.</p>
+          </div>
+          
+          <!-- Sección de Consejos de Estudio -->
+          <div class="row">
+            <!-- Consejo 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="../assets/Logotipo/organizar_tiempo.jpg" class="card-img-top" alt="Consejo 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Organiza tu tiempo</h5>
+                    <p class="card-text">Crea un horario de estudio y sigue una rutina diaria para mejorar tu concentración.</p>
+                    <a href="https://psicologiaymente.com/psicologia/como-organizar-tiempo-estudio" target="_blank" class="btn btn-primary mt-2">Más información</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Consejo 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="../assets/Logotipo/espacio.jpg" class="card-img-top" alt="Consejo 2">
+                  <div class="card-body">
+                    <h5 class="card-title">Espacio adecuado</h5>
+                    <p class="card-text">Elige un espacio tranquilo y cómodo para estudiar, evitando distracciones.</p>
+                    <a href="https://www.admagazine.com/editors-pick/como-crear-un-area-de-estudio-en-casa-20200820-7308-articulos" target="_blank" class="btn btn-primary mt-2">Más información</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Consejo 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="../assets/Logotipo/pomodoro.jpg" class="card-img-top" alt="Consejo 3">
+                  <div class="card-body">
+                    <h5 class="card-title">Técnica de Pomodoro</h5>
+                    <p class="card-text">Estudia en intervalos de 25 minutos con descansos cortos para mantener la productividad.</p>
+                    <a href="https://edem.eu/tecnica-pomodoro-que-es-y-como-aplicarla-para-estudiar/#:~:text=Pasos%20para%20utilizar%20la%20t%C3%A9cnica%20Pomodoro&text=Ten%20a%20mano%20un%20cron%C3%B3metro,descansos%20de%205%20minutos%20pertinentes." target="_blank" class="btn btn-primary mt-2">Más información</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Consejo 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="../assets/Logotipo/notas.jpg" class="card-img-top" alt="Consejo 4">
+                  <div class="card-body">
+                    <h5 class="card-title">Toma notas efectivas</h5>
+                    <p class="card-text">Utiliza técnicas de toma de notas como el Método Cornell para una mejor retención.</p>
+                    <a href="https://www.compilatio.net/es/noticias/notas-eficaces" target="_blank" class="btn btn-primary mt-2">Más información</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Consejo 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="../assets/Logotipo/resumen.jpg" class="card-img-top" alt="Consejo 5">
+                  <div class="card-body">
+                    <h5 class="card-title">Haz resúmenes</h5>
+                    <p class="card-text">Después de cada sesión de estudio, resume lo que has aprendido para reforzar la memoria.</p>
+                    <a href="https://santandersmartbank.es/educacion/como-hacer-resumen/" target="_blank" class="btn btn-primary mt-2">Más información</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Consejo 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="../assets/Logotipo/pausas.jpg" class="card-img-top" alt="Consejo 6">
+                  <div class="card-body">
+                    <h5 class="card-title">Realiza pausas activas</h5>
+                    <p class="card-text">Incluye pausas activas durante el estudio para relajar la mente y mejorar la concentración.</p>
+                    <a href="https://www.lasalle.edu.co/Noticias/ViveUnisalleNoticias/uls/Pausas-activas#:~:text=Las%20pausas%20activas%20son%20breves,Organizaci%C3%B3n%20Mundial%20de%20la%20Salud)." target="_blank" class="btn btn-primary mt-2">Más información</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

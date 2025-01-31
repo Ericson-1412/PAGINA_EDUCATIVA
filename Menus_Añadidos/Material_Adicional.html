@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mensajes Motivacionales</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../assets/Logotipo/logotipo.png"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+    <link rel="stylesheet" href="../Menus_Añadidos/nuevo_estilo.css" />
+    <link rel="stylesheet" href="../Propio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div
+      class="page-wrapper"
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin6"
+      data-sidebartype="full"
+      data-sidebar-position="fixed"
+      data-header-position="fixed"
+    >
+      <!-- Sidebar Start -->
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar" data-simplebar>
+          <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a
+              href="../Estudiante/Panel.html"
+              class="text-nowrap logo-img ms-0 ms-md-1"
+            >
+              <img
+                src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png"
+                width="180"
+                alt=""
+              />
+            </a>
+            <div
+              class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
+              id="sidebarCollapse"
+            >
+              <i class="ti ti-x fs-8"></i>
+            </div>
+          </div>
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="mb-4 pb-2">
+              <!-- Menú principal -->
+              <li class="nav-small-cap">
+                <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+                <span class="hide-menu">Menú Principal</span>
+              </li>
+              <!-- Cursos con Submenú -->
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow sidebar-link info-hover-bg"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <span class="aside-icon p-2 bg-light-info rounded-3">
+                    <i class="ti ti-book fs-7 text-info"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Cursos</span>
+                </a>
+                <ul
+                  aria-expanded="false"
+                  class="collapse first-level styled-submenu"
+                >
+                  <li class="sidebar-item">
+                    <a
+                      href="../Estudiante/Programacion.html"
+                      class="sidebar-link"
+                    >
+                      <i class="ti ti-code fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Programación</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Ofimatica.html" class="sidebar-link">
+                      <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Ofimática</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Idioma.html" class="sidebar-link">
+                      <i class="ti ti-language fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Idioma Inglés</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="../Estudiante/Calculo.html" class="sidebar-link">
+                      <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Cálculo</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      href="../Estudiante/Comunicacion.html"
+                      class="sidebar-link"
+                    >
+                      <i class="ti ti-microphone fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Comunicación</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      href="../Estudiante/Empleabilidad.html"
+                      class="sidebar-link"
+                    >
+                      <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                      <span class="hide-menu">Empleabilidad</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Consejos de Estudio -->
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link sidebar-link danger-hover-bg"
+                  href="../Menus_Añadidos/Consejos.html"
+                  aria-expanded="false"
+                >
+                  <span class="aside-icon p-2 bg-light-danger rounded-3">
+                    <i class="ti ti-bulb fs-7 text-danger"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+                </a>
+              </li>
+              <!-- Mensajes Motivacionales -->
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link sidebar-link secondary-hover-bg"
+                  href="../Menus_Añadidos/Material_Adicional.html"
+                  aria-expanded="false"
+                >
+                  <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                    <i class="ti ti-heart fs-7 text-secondary"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1"
+                    >Mensajes Motivacionales</span
+                  >
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link sidebar-link info-hover-bg"
+                  href="javascript:void(0);"
+                  onclick="volverMenu()"
+                  aria-expanded="false"
+                >
+                  <span class="aside-icon p-2 bg-light-info rounded-3">
+                    <i class="ti ti-home fs-7 text-primary"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1"
+                    >Volver al menu Principal</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="body-wrapper">
+        <main class="main-content container mt-4">
+          <!-- <h1 class="text-center mb-4">Mensajes Motivacionales para Estudiantes</h1> -->
+          <div class="row">
+            <div class="news-container">
+              <!-- Tarjeta 1 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/Montaña.jpeg"
+                      alt="El exito del mañana"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "El éxito es la suma de pequeños esfuerzos repetidos día
+                      tras día."
+                    </h3>
+                    <h5>
+                      Recuerda que cada paso que des te acerca a tus metas.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 2 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/organizacion-del-estudio.jpg"
+                      alt="Educacion pasaporte al futuro"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "La educación es el pasaporte hacia el futuro, y el mañana
+                      pertenece a quienes se preparan hoy."
+                    </h3>
+                    <h5>Sigue aprendiendo y construyendo tu futuro.</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 3 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/superacion-personal.jpg"
+                      alt="No importes que avances"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "No importa lo lento que avances, siempre y cuando no te
+                      detengas."
+                    </h3>
+                    <h5>
+                      La constancia es la clave para lograr lo que te propones.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 4 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/libro-antecedentes.jpg"
+                      alt="El trabajo es el diccionario"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "El único lugar donde el éxito viene antes que el trabajo
+                      es en el diccionario."
+                    </h3>
+                    <h5>El esfuerzo siempre tiene su recompensa.</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 5 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/altitud.jpeg"
+                      alt="La actitud determian la altitud"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "Tu actitud, no tu aptitud, es lo que determina tu
+                      altitud."
+                    </h3>
+                    <h5>Mantén una mentalidad positiva y no te rindas.</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 6 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/Atardecer.jpeg"
+                      alt="El fracaso es solo la oportunidad"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "El fracaso es solo la oportunidad de comenzar de nuevo,
+                      pero esta vez de manera más inteligente."
+                    </h3>
+                    <h5>
+                      Aprende de tus errores y sigue adelante con más fuerza.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 7 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/Amar_eltrabajo.jpeg"
+                      alt="ama tu trabajo"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "La única manera de hacer un gran trabajo es amar lo que
+                      haces."
+                    </h3>
+                    <h5>
+                      Encuentra tu pasión y sigue trabajando duro para
+                      alcanzarla.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 8 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/Avion.jpeg"
+                      alt="La motivación te lleva lejos"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "La motivación te lleva lejos, pero la disciplina te lleva
+                      más allá."
+                    </h3>
+                    <h5>
+                      Sé constante y disciplinado en tu camino hacia el éxito.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 9 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/Carretera.jpeg"
+                      alt="No importa qué tan lento vayas"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "No importa qué tan lento vayas, siempre y cuando no te
+                      detengas."
+                    </h3>
+                    <h5>
+                      La constancia es clave para el crecimiento personal.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 10 -->
+              <div class="news-card" onclick="toggleCard(this)">
+                <div class="news-card-inner">
+                  <div class="news-card-front">
+                    <img
+                      src="../assets/images/Consejos/depositphotos.jpg"
+                      alt="Si puedes soñarlo"
+                    />
+                  </div>
+                  <div class="news-card-back">
+                    <h3>
+                      "Si puedes soñarlo, puedes lograrlo con trabajo y
+                      dedicación."
+                    </h3>
+                    <h5>
+                      Cree en tus sueños y trabaja para hacerlos realidad.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+  </body>
+</html>

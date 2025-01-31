@@ -1,0 +1,93 @@
+/* Estilos para el acordeón de contenido del curso */
+.accordion-button {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #007bff; /* Fondo azul al expandirse */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .accordion-button:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+  }
+  
+  .accordion-body {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid #e9ecef; /* Borde */
+    border-top: none; /* Sin borde superior */
+    border-radius: 0 0 5px 5px; /* Bordes redondeados en la parte inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra */
+  }
+  
+  .accordion-item {
+    border: none; /* Sin borde */
+    margin-bottom: 10px; /* Separación entre elementos */
+  }
+  
+  .accordion-item:last-child {
+    margin-bottom: 0; /* Sin margen inferior en el último */
+  }
+  
+  /* Estilo de los enlaces a PDF */
+  .accordion-body a {
+    color: #007bff; /* Color azul para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+  }
+  
+  .accordion-body a:hover {
+    color: #0056b3; /* Color más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+  }
+
+/* Estilos para las imágenes dentro del acordeón */
+.accordion-body img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: 100px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para que se recorte y no se deforme */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+/* Contenedor de la imagen para centrarla y darle tamaño */
+.image-container {
+  display: flex; /* Usar flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente si es necesario */
+  margin-bottom: 15px; /* Espacio debajo del contenedor */
+}
+
+/* Estilo para la imagen de referencia */
+.reference-image {
+  max-width: 70%; /* Ajustar ancho máximo al 70% del contenedor */
+  height: auto; /* Mantener proporción */
+  border-radius: 10px; /* Bordes redondeados para mejor estética */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para destacar */
+  transition: transform 0.3s ease; /* Efecto de transformación suave */
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.reference-image:hover {
+  transform: scale(1.05); /* Aumenta ligeramente la imagen al pasar el cursor */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al hacer hover */
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* Centra el título horizontalmente */
+  margin-top: 10px; 
+}
+
+.card-text {
+  text-align: center; /* Centra el texto de la descripción también */
+}

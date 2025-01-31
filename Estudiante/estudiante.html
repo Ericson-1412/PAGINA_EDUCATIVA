@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="estudiante.css" />
+    <script>
+      function redirigir() {
+        window.location.href = "Panel.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-image">
+        <img src="../assets/login.jpg" alt="Building" />
+      </div>
+
+      <div class="login-form">
+        <div class="logo">
+          <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" alt="Logo" />
+        </div>
+        <h2>Bienvenidos a Ethel Company</h2>
+        <p>
+          Por favor ingresa con tu cuenta de correo electrónico de estudiante y
+          tu contraseña
+        </p>
+
+        <form onsubmit="redirigir(); return false;">
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <a href="#">¿No puedes acceder a tu cuenta?</a>
+      </div>
+    </div>
+  </body>
+</html>
+

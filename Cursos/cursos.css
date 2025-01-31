@@ -1,0 +1,163 @@
+/* Fondo de página y centrado de contenido */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background: #f3f4f6;
+}
+
+/* Estilos del header */
+header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+header .header-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Contenedor principal para centrar paneles en pantalla */
+.panel-wrapper {
+  display: flex;
+  justify-content: center; /* Centra los paneles horizontalmente */
+  align-items: center; /* Centra los paneles verticalmente */
+  gap: 20px; /* Espacio entre los paneles */
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  height: calc(100vh - 80px); /* Resta el espacio ocupado por el header */
+  margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* Paneles */
+.welcome-panel,
+.benefits-section {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f0f0f5, #d9d9e3);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  color: #333;
+  flex-grow: 1; /* Permite que ambos paneles ocupen el mismo espacio */
+  min-height: 400px; /* Asegura que ambos paneles tengan al menos esta altura */
+}
+
+/* Contenido dentro de welcome-panel */
+.welcome-panel h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.welcome-panel p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Estilo de botón interactivo con mayor espacio alrededor */
+.welcome-panel .btn {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  margin-top: 30px; /* Espacio arriba del botón */
+  margin-bottom: 30px; /* Espacio debajo del botón */
+}
+
+.welcome-panel .btn:hover {
+  background: linear-gradient(45deg, #5a0ebd, #1a5adf);
+  transform: scale(1.05);
+}
+
+.welcome-panel .btn:active {
+  transform: scale(0.98);
+}
+
+/* Estilo del texto motivacional para separar aún más del botón */
+.welcome-panel .motivational-quote {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 20px; /* Espacio adicional entre el botón y el texto */
+}
+
+/* Contenido dentro de benefits-section */
+.benefits-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.benefits-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-section ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-section ul li i {
+  color: #6a11cb;
+  margin-right: 10px;
+}
+
+/* Responsive: ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .panel-wrapper {
+    flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+    align-items: center; /* Centra los elementos cuando están en vertical */
+    height: auto; /* Permite que el contenedor se ajuste a su contenido en pantallas pequeñas */
+  }
+
+  .welcome-panel,
+  .benefits-section {
+    max-width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+    min-height: auto; /* Elimina la altura mínima en pantallas pequeñas */
+  }
+
+  .welcome-panel h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-panel p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Imagen de fondo para todo el cuerpo */
+body {
+  background: url('https://www.udima.es/sites/udima.es/files/GettyImages-1263424631%20(1).jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+

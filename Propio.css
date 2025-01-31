@@ -1,0 +1,438 @@
+/* Estilos generales */
+.news-section {
+  padding: 50px;
+}
+
+.news-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: "Baguet Script", cursive;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px;
+  justify-items: center;
+}
+
+.news-card {
+  width: 600px; /* Tamaño original */
+  height: 400px;
+  perspective: 1000px; /* Necesario para el efecto 3D */
+  transition: all 0.3s ease;
+  overflow: hidden; /* Esconder contenido desbordante */
+}
+
+.news-card.expanded {
+  width: 600px;
+  height: 600px;
+}
+
+.news-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.news-card:hover .news-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Responsive para pantallas medianas */
+@media (max-width: 1500px) {
+  .news-container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  .news-card {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    height: 400px; /* Reducir la altura */
+  }
+
+  .news-card.expanded {
+    height: 600px;
+  }
+}
+
+/* Responsive para pantallas medianas */
+@media (max-width: 920px) {
+  .news-container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  .news-card {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    height: 400px; /* Reducir la altura */
+  }
+
+  .news-card.expanded {
+    height: 600px;
+  }
+}
+
+/* Responsive para pantallas medianas */
+@media (max-width: 768px) {
+  .news-container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  .news-card {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    height: 300px; /* Reducir la altura */
+  }
+
+  .news-card.expanded {
+    height: 500px;
+  }
+}
+
+/* Responsive para celulares pequeños */
+@media (max-width: 480px) {
+  .news-section {
+    padding: 20px; /* Reducir el padding en móviles */
+  }
+
+  .news-section h2 {
+    font-size: 1.6rem; /* Reducir tamaño de la fuente */
+    margin-bottom: 20px; /* Menor espacio debajo del título */
+  }
+
+  .news-container {
+    grid-template-columns: 1fr; /* Una sola columna para móviles */
+    gap: 15px; /* Reducir el espacio entre tarjetas */
+  }
+
+  .news-card {
+    width: 100%; /* Ajuste completo al ancho de la pantalla */
+    height: 100px; /* Reducir altura en móviles */
+  }
+
+  .news-card.expanded {
+    height: 650px; /* Ajuste de altura expandida */
+  }
+
+  .news-card-inner {
+    font-size: 0.9rem; /* Ajustar el tamaño del texto dentro de la tarjeta */
+  }
+}
+
+/**/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Cambiado a 'space-between' para dos columnas */
+}
+
+.column {
+  flex: 1 1 calc(50% - 20px); /* Dos columnas con espacio entre ellas */
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.column_ {
+  flex: 1 1 calc(50% - 20px); /* Dos columnas con espacio entre ellas */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  font-family: "Baguet Script", cursive;
+}
+
+.column i {
+  font-size: 2em; /* Asegura que los iconos tengan el mismo tamaño */
+  margin-bottom: 10px;
+}
+
+.column h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.column p {
+  font-size: 1em;
+  color: #666;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-image: linear-gradient(45deg, #ff6b6b, #f06595, #6a4c93, #4d9f7e);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-image 0.3s ease;
+}
+
+.btn:hover {
+  background-image: linear-gradient(45deg, #4d9f7e, #6a4c93, #f06595, #ff6b6b);
+}
+
+/* Parte delantera de la carta */
+.news-card-front,
+.news-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Parte trasera de la carta */
+.news-card-back {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+.news-card-back h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.news-card-back p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  display: none; /* Ocultar el texto adicional */
+}
+
+.news-card.expanded .news-card-back p {
+  display: block; /* Mostrar el texto cuando se expanda */
+}
+/**/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.recursos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: "Baguet Script", cursive;
+}
+.recursos h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.section {
+  flex: 1 1 300px;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgb(143, 126, 13);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.section h2 {
+  margin: 10px 0;
+  font-size: 1.3em;
+}
+
+.section p {
+  font-size: 1em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem;
+  background-color: #f1f1f1;
+}
+
+.menu-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+
+.title-footer {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.contact-info,
+.information,
+.my-account {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+  list-style: none;
+  color: #1d1d1d;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+  color: var(--dark-color);
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(143, 126, 13);
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.copyright p {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+  .menu-footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+  .menu-footer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .title-footer {
+    font-size: 1.4rem;
+  }
+
+  .copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-info ul,
+  .information ul,
+  .my-account ul {
+    display: none; /* Oculta las listas en pantallas muy pequeñas para mejor legibilidad */
+  }
+}

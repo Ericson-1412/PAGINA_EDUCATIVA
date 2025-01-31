@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PANEL ESTUDIANTES</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/Logotipo/logotipo.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="../Estudiante/estudiante.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/script.js" defer></script> 
+</head>
+
+<body>
+
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a href="#" class="text-nowrap logo-img ms-0 ms-md-1">
+              <img src="../assets/Logotipo/LOGOTIPO_ESTUDIO.png" width="180" alt="">
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="ti ti-x fs-8"></i>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav" class="mb-4 pb-2">
+            <!-- Título del menú principal -->
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Menú Principal</span>
+            </li>
+        
+           <!-- Cursos con Submenú -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow sidebar-link info-hover-bg" href="javascript:void(0)" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-book fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Cursos</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level styled-submenu">
+                <li class="sidebar-item">
+                  <a href="Programacion.html" class="sidebar-link">
+                    <i class="ti ti-code fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Programación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Ofimatica.html" class="sidebar-link">
+                    <i class="ti ti-layout fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Ofimática</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Idioma.html" class="sidebar-link">
+                    <i class="ti ti-language fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Idioma Inglés</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Calculo.html" class="sidebar-link">
+                    <i class="ti ti-calculator fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Cálculo</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Comunicacion.html" class="sidebar-link">
+                    <i class="ti ti-microphone fs-6 text-muted me-2"></i> 
+                    <span class="hide-menu">Comunicación</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="Empleabilidad.html" class="sidebar-link">
+                    <i class="ti ti-briefcase fs-6 text-muted me-2"></i>
+                    <span class="hide-menu">Empleabilidad</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Consejos de Estudio -->
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link danger-hover-bg" href="../Menus_Añadidos/Consejos.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-danger rounded-3">
+                  <i class="ti ti-bulb fs-7 text-danger"></i> <!-- Cambiado a un icono de bombilla -->
+                </span>
+                <span class="hide-menu ms-2 ps-1">Consejos de Estudio</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link secondary-hover-bg" href="../Menus_Añadidos/Material_Adicional.html" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                  <i class="ti ti-heart fs-7 text-secondary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Mensajes Motivacionales</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link info-hover-bg" href="javascript:void(0);" onclick="volverMenu()" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-home fs-7 text-primary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Volver al menu Principal</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <br><br>
+    <div class="body-wrapper">
+        <main class="main-content container mt-4">
+          <h1 class="text-center">Contenido del Curso de Comunicacion</h1>
+          <div class="accordion" id="courseAccordion"><br>
+            <!-- Sección 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  SECCIÓN 1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 1:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1TUVr0dkfrKCWpbD4TsPqjlcKIMbg5LZf/view?usp=sharing" target="_blank">Ciencias de la Comunicacion II</a></li>
+                    <li><a href="https://drive.google.com/file/d/1EqaJKbmKg2TTnDS6_GAEFQwK4HGA6I99/view?usp=sharing" target="_blank">CIENCIAS DE LA COMUNICACION II BACH SONORA</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SECCIÓN 2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 2:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1VzRUb8lpFDhU1C5k8nuP5tNVlEoHJZpR/view?usp=sharing" target="_blank">CIENCIAS DE LA COMUNICACIÓN II 2018-1</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Qi80agAbBAeucw40J6QFVSftQjDvHJVw/view?usp=sharing" target="_blank">CIENCIAS DE LA COMUNICACIÓN II 2017-1</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Sección 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  SECCIÓN 3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#courseAccordion">
+                <div class="accordion-body">
+                  <p>Material de la sección 3:</p>
+                  <ul>
+                    <li><a href="https://drive.google.com/file/d/1iTjoIyk5ahXnbgsE3V7JZMN2KFIbsLY8/view?usp=sharing" target="_blank">Ciencias de la Comunicación II 15-1</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GCTIVEVz-UNQdsPmjCJXr-Pp6Tq99S34/view?usp=sharing" target="_blank">CIENCIAS DE LA COMUNICACIÓN II - Guía de Actividades del Alumno</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+          <!-- Sección 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                SECCIÓN 4
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 4:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1S1wHeO7GX93sig5SbR4kJqsBMlY4sC3e/view?usp=drive_link" target="_blank">Como Elaborar Y Asesorar una Investigacion de Tesis- 2Edicion</a></li>
+                  <li><a href="https://drive.google.com/file/d/1AMQg1JVPSnb9arSflg1IrsXt99BmxQeG/view?usp=drive_link" target="_blank">ComoHacerTesis - Eco</a></li>
+                  <li><a href="https://drive.google.com/file/d/1H-hyC1P1UsxWOzqnXokMz6LLetQcYHwk/view?usp=drive_link" target="_blank">el-proyecto-de-investigacion-fidias-arias-6ta-ed-2012</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                SECCIÓN 5
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 5:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/19XSYa-km0c9obNim6a-oTEgVrF7wyhpR/view?usp=drive_link" target="_blank">Gonzalez Reyna Susana - Manual De Investigacion Documental</a></li>
+                  <li><a href="https://drive.google.com/file/d/1nOZt3FjG_qcNpVrh2GBFmNkb2JUu6tEb/view?usp=drive_link" target="_blank">moran-y-alvarado-metodos-de-investigacion-1ra</a></li>
+                  <li><a href="https://drive.google.com/file/d/1oMFqOb8_GhCSTxjtCj_eQ27r33f0WW6D/view?usp=drive_link" target="_blank">Buena comunicación = Relaciones satisfactorias</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Sección 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                SECCIÓN 6
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 6:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1RPQzPelXpwHcuRnPK2amO9A45jnfOxMb/view?usp=drive_link" target="_blank">Cómo aumentar la eficacia de la capacitación</a></li>
+                  <li><a href="https://drive.google.com/file/d/1D5pBcxocArPO5DYIKyONmWAA3xKQOTX3/view?usp=drive_link" target="_blank">Cómo comunicarse de manera eficaz</a></li>
+                  <li><a href="https://drive.google.com/file/d/1byyewRICkOn8hxRgz7PphSmrl8_Ae0ua/view?usp=drive_link" target="_blank">Cómo delegar de forma eficaz</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                SECCIÓN 7
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+              data-bs-parent="#courseAccordion">
+              <div class="accordion-body">
+                <p>Material de la sección 7:</p>
+                <ul>
+                  <li><a href="https://drive.google.com/file/d/1uGYLqom-5mYYmsXsVoTJ55O8hnXIejWo/view?usp=drive_link" target="_blank">Cómo realizar una presentación</a></li>
+                  <li><a href="https://drive.google.com/file/d/1Qy24djbVWHi4GbYuPJjPrWiF8KqUkTUe/view?usp=drive_link" target="_blank">Oratoria para tímidos</a></li>
+                  <li><a href="https://drive.google.com/file/d/1SDXjdn5sH4oJ91rx14iMsgMbaAxuwG_i/view?usp=drive_link" target="_blank">Planificar, escribir, corregir</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón para volver al panel principal -->
+        <div class="text-center mt-5">
+            <a href="Panel.html" class="btn btn-primary">Volver al Panel Principal</a>
+        </div>
+        </main>
+      </div>
+    </div>
+  
+    
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

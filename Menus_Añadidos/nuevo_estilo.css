@@ -1,0 +1,179 @@
+body {
+  background-color: #f4f7fa;
+}
+
+h1 {
+  color: #3b3f58;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #e6e9ef);
+  box-shadow: 10px 10px 20px #d1d4da, -10px -10px 20px #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 24px #c9cccf, -12px -12px 24px #ffffff;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3b3f58;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #5a67d8;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 15px rgba(90, 103, 216, 0.4);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #434caa;
+  box-shadow: 5px 5px 15px rgba(67, 76, 170, 0.6);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-md-6 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos de la tarjeta de flip */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.flip-card-front {
+  background-color: #f0f0f0;
+}
+
+.flip-card-back {
+  background-color: #007bff;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-title,
+.card-text {
+  padding: 10px;
+}
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Ajusta el número de columnas si es necesario */
+  gap: 20px;
+  justify-items: center;
+}
+
+.news-card {
+  width: 500px; /* Ancho fijo */
+  height: 300px; /* Alto fijo */
+  perspective: 1000px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.news-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.news-card:hover .news-card-inner {
+  transform: rotateY(180deg);
+}
+
+.news-card-front,
+.news-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.news-card-front {
+  background-color: #f8f9fa;
+}
+
+.news-card-back {
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Forzar h3 en negrita */
+.news-card-back h3 {
+  font-weight: bold;
+  margin-bottom: 30px !important;
+}
